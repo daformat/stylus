@@ -18,7 +18,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
      # Pull repo to test machine
-     - uses: actions/checkout@v4
+     - uses: actions/checkout@v5
      # Configures the node version used on GitHub-hosted runners
      - uses: actions/setup-node@v4
        with:
@@ -40,7 +40,7 @@ jobs:
         node: [16, 18, 20, 23]
     runs-on: ${{ matrix.os }}
     steps:
-     - uses: actions/checkout@v4
+     - uses: actions/checkout@v5
      - uses: actions/setup-node@v4
        with:
          node-version: ${{ matrix.node }}
@@ -55,7 +55,7 @@ jobs:
     name: 'Run stylus benchmark with node20'
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v4
+     - uses: actions/checkout@v5
      - uses: actions/setup-node@v4
        with:
          node-version: '22'
@@ -70,7 +70,7 @@ jobs:
     name: 'yarn exec stylus regression test'
     runs-on: macos-latest
     steps:
-     - uses: actions/checkout@v4
+     - uses: actions/checkout@v5
      - uses: actions/setup-node@v4
        with:
          node-version: '22'
@@ -87,7 +87,7 @@ jobs:
     name: 'Run nyc for code coverage'
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v4
+     - uses: actions/checkout@v5
      - uses: actions/setup-node@v4
        with:
          node-version: '22'
@@ -106,7 +106,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
      # Pull repo to test machine
-     - uses: actions/checkout@v4
+     - uses: actions/checkout@v5
      # Configures the deno version used on GitHub-hosted runners
      - uses: denoland/setup-deno@v2
        with:
